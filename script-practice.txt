@@ -1,0 +1,25 @@
+1. Check if person is adult (age >= 18)
+2. Check if number is positive (> 0)
+3. Check if marks are pass (>= 33)
+4. Check if two numbers are equal
+5. Check if speed limit exceeded (> 80)
+6. Check if temperature is freezing (<= 0)
+7. Check if salary is greater than 50000
+8. Check if student gets distinction (>= 75)
+9. Check if two numbers are not equal
+10. Check if weight is underweight (< 50)
+11. Check if person is senior citizen (>= 60)
+12. Check if number is less than or equal to 100
+13. Check if discount is applicable (bill >= 1000)
+14. Check if year is century year (% 100 == 0)
+15. Check if runs scored are enough to win (>= target)
+16. Check if server port is valid (>= 1 and <= 65535)
+17. Check if CPU usage is critical (>= 90)
+18. Check if disk usage is warning level (>= 80)
+19. Check if number of running pods is healthy (>= 3)
+20. Check if memory usage is safe (< 85)
+21. Check if server response time is slow (> 200ms)
+22. Check if log file size is too large (>= 500 MB)
+23. Check if number of failed deployments is zero (-eq 0)
+24. Check if replica count is minimum required (>= 2)
+25. Check if HTTP status code is success (-eq 200)
