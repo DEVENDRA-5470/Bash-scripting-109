@@ -10,7 +10,6 @@
 10. Check if weight is underweight (< 50)
 11. Check if person is senior citizen (>= 60)
 12. Check if number is less than or equal to 100
-13. Check if discount is applicable (bill >= 1000)
 15. Check if runs scored are enough to win (>= target)
 16. Check if server port is valid (>= 1 and <= 65535)
 17. Check if CPU usage is critical (>= 90)
