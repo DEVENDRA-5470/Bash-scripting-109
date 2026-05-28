@@ -1,0 +1,14 @@
+gh auth login
+gh auth status
+gh auth logout
+gh repo create
+gh repo list
+gh repo list --limit 5
+gh repo list --public
+gh repo list --private
+gh repo list --limit 5 --json name -q '.[].name'
+gh repo view DEVENDRA-5470/Github-Practices
+gh api user/repos
+gh api user/repos?per_page=1
+gh api user/repos?per_page=1 --jq '.[].owner.id'
+gh api user/repos?per_page=1 --jq '.[].owner'
