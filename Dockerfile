@@ -1,7 +1,6 @@
-# stage-1 building phase
-FROM python:3.11-slim AS builder
+FROM python:3.11-slim
 
-WORKDIR /install
+WORKDIR /app
 
 RUN apt-get update && \
     apt-get install -y \
@@ -12,22 +11,18 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-RUN pip install --prefix=install --no-cache-dir -r requirements.txt
-
-# stage-2 final phase
-
-FROM python:3.11-slim
-
-WORKDIR /app
-
-RUN apt-get update && \
-    apt-get install -y libmariadb3 && \
-    rm -rf /var/lib/apt/lists/*
-
-COPY --from=builder /install /usr/local
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
 EXPOSE 8000
 
 CMD ["gunicorn", "--bind" , "0.0.0.0:8000" ,"bookvault.wsgi"]
+
+
+# Commands
+docker images
+docker build -f Dockerfile.multistage -t my-book-app:multistage . 
+docker build -t my-book-app:no-stage .
+docker run -it --rm my-book-app:no-stage sh
+docker rmi image-name
